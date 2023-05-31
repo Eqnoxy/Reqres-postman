@@ -26,8 +26,5 @@ jobs:
 
   - name: Run the API and Postman's tests
     run: | 
-      npm run start:dev &
-28
-      sleep 60
       newman run "Reqres.in.postman_collection.json"
     
