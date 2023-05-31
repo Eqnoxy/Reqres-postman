@@ -21,7 +21,7 @@
 							"",
 							"    let id = response.data[0].id;",
 							"    let mail = response.data[0].email;",
-							"  //  console.log(mail);",
+							
 							"  pm.test(\"Mail is corect\", () =>{",
 							"    pm.expect(response.data[0].email).to.eql('michael.lawson@reqres.in');",
 							"  });"
@@ -151,10 +151,7 @@
 							"    pm.response.to.have.status(404);",
 							"});",
 							"",
-							"    const response = pm.response.json();",
-							"",
-							"  ",
-							""
+							
 						],
 						"type": "text/javascript"
 					}
@@ -262,10 +259,7 @@
 							" const response = pm.response.json();",
 							"",
 							" let id = response.id;",
-							" ",
-							"pm.globals.set(\"mid\", \"id\");",
-							"const mid = pm.variables.replaceIn('{{$mid}}')",
-							"console.log(mid);"
+							"
 						],
 						"type": "text/javascript"
 					}
