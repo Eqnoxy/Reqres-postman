@@ -21,7 +21,7 @@
 							"",
 							"    let id = response.data[0].id;",
 							"    let mail = response.data[0].email;",
-							
+							"  //  console.log(mail);",
 							"  pm.test(\"Mail is corect\", () =>{",
 							"    pm.expect(response.data[0].email).to.eql('michael.lawson@reqres.in');",
 							"  });"
@@ -151,7 +151,9 @@
 							"    pm.response.to.have.status(404);",
 							"});",
 							"",
-							
+							" ",
+							"  ",
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -256,10 +258,16 @@
 							"    pm.response.to.have.status(201);",
 							"});",
 							"",
-							" const response = pm.response.json();",
+							"const response = pm.response.json();",
+							"let mid = response.id",
 							"",
-							" let id = response.id;",
-							"
+							"",
+							"pm.globals.set(\"mid\", mid);",
+							"",
+							"pm.test(\"Name is corect\", () =>{",
+							"    pm.expect(response.name).to.eql('morpheus');",
+							"  });",
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -313,7 +321,9 @@
 							"",
 							"pm.test('Job is correct', () =>{",
 							"    pm.expect(response.job).to.be.eql('zion resident')",
-							"});"
+							"});",
+							"",
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -642,6 +652,12 @@
 				}
 			},
 			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "mid",
+			"value": ""
 		}
 	]
 }
